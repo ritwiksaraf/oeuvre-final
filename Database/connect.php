@@ -5,7 +5,4 @@
     if(!$db){
         echo $db->lastErrorCode();
     }
-    else {
-    	echo serialize($db);
-    }
 ?>
