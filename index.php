@@ -1,28 +1,7 @@
 <?php
     include 'Database/connect.php';
 
-    $username= $_POST['user'];
-    $password= hash("sha256", $_POST['pass']);
-
-    $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
-    $statement->bindValue(1, $username);
-    $statement->bindValue(2, $password);
-    $result = $statement->execute();
-
-    if(!empty($username) && !empty($password)){
-    if(empty($result->fetchArray(SQLITE3_ASSOC))){
-        echo "<script>alert('Invalid Credentials')</script>";
-        }
-    else{
-        session_start();
-        $_SESSION['user'] = $username;
-        $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
-        setcookie($username, $random, time()+3600);
-        header("Location: blog/home.php");
-        }
-    }
-
-    ?>
+?>
 
 
 <!doctype html>
@@ -142,3 +121,28 @@
     <script src="Includes/scripts/script.js"></script>
 </body>
 </html>
+
+<?php
+
+ $username= $_POST['user'];
+    $password= hash("sha256", $_POST['pass']);
+
+    $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
+    $statement->bindValue(1, $username);
+    $statement->bindValue(2, $password);
+    $result = $statement->execute();
+
+    if(!empty($username) && !empty($password)){
+    if(empty($result->fetchArray(SQLITE3_ASSOC))){
+        echo "<script>alert('Invalid Credentials')</script>";
+        }
+    else{
+        session_start();
+        $_SESSION['user'] = $username;
+        $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
+        setcookie($username, $random, time()+3600);
+        header("Location: blog/home.php");
+        }
+    }
+
+?>
