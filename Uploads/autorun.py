@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from cms import updatedb, fileMove
 import sys
 

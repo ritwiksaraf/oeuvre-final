@@ -1,11 +1,11 @@
 <?php
 
-include '../includes/php/connect.php';
+include '../Database/connect.php';
 session_start();
 $username = $_SESSION['user'];
 
 if(!isset($_COOKIE[$username])){
-    header("Location: admin-login.php");
+    header("Location: index.php");
 }
 ?>
 
@@ -45,7 +45,7 @@ if($decision == 'disapprove'){
     $statement->bindValue(1, $title);
     $result = $statement->execute();
     unlink($file);
-    delete_directory("../includes/posts/images/".$title);
+    delete_directory("../Includes/posts/images/".$title);
     header("Location: dashboard.php");
 }
 elseif($decision == 'approve'){
@@ -63,7 +63,7 @@ elseif($decision == 'approve'){
     $put_data->bindValue(4,$row['small_content']);
     $put_data->execute();
 
-    rename($row['Profanity']."-posts/".$title.".html", "../blog/posts/$title.html"); //move approved file to blog posts
+    rename($row['Profanity']."-posts/".$title.".html", "../Blog/posts/$title.html"); //move approved file to blog posts
 
     $delete_data = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $delete_data->bindValue(1, $title);

@@ -141,7 +141,7 @@
         $_SESSION['user'] = $username;
         $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
         setcookie($username, $random, time()+3600);
-        header("Location: blog/home.php");
+        header("Location: Blog/Home.php");
         }
     }
 

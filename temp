@@ -1,0 +1,23 @@
+
+          <?php
+          $statement = $db->prepare('SELECT * FROM postDetails');
+          $result = $statement->execute();
+          while($row = $result->fetchArray(SQLITE3_ASSOC)){ ?>
+                  <div class="col-lg-4 col-md-6 mb-4">
+                     <div class="card h-100">
+                      <a href="#"><img class="card-img-top" src="/includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"></a>
+                      <div class="card-body">
+                          <h4 class="card-title">
+                          <a href="viewer.php?file=<?php echo $row['Profanity'].'-posts/'.str_replace('_', ' ', $row['Title']); ?>.html"><?php echo $row['Title']; ?></a>
+                          </h4>
+                          <h5><?php echo $row['Author']; ?></h5>
+                          <h6><?php echo $row['Date']; ?></h6>
+                          <p class="card-text"><?php echo $row['small_content'];?></p>
+                      </div>
+                      <div class="card-footer" style="background-color:<?php echo $row['Profanity']; ?>;">
+
+                      </div>
+                      </div>
+                  </div>
+           <?php } ?>
+

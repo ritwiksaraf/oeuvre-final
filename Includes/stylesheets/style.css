@@ -4,8 +4,22 @@
     padding:0;
    
 }
+/* overlay css*/
+.dropzone{
+width:80%;
+height:40%;
+border: 0.3em dashed #ccc;
+color: #ccc;
+margin: auto;
+text: center;
+line-height: 300px;
+}
 
+.dropzone.dragover{
+border: 0.3em dashed #1188bf;
+color: #1188bf;
 
+}
 
 
 /*  navigation bar */

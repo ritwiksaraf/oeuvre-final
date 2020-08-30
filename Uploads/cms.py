@@ -86,7 +86,7 @@ def check_profanity(docfile):
     fdetails = name.split("-") #in order to get date, author's name and title
     year, month, day = fdetails[0], fdetails[1], fdetails[2]
     Date = datetime.date(int(year), int(month), int(day))
-    fdetails = [Date, fdetails[3], fdetails[4], small_content]
+    fdetails = [Date, fdetails[3], fdetails[4], small_content, fdetails[5]]
     return (flag, fdetails) # returns flag along with file details
 
 # prints all found cuss words
@@ -106,7 +106,7 @@ def docx2html(docxfile, header, footer):
         name = os.path.basename(docx_file.name) # gets name of text file
     
         try:
-            year, month, day, author, title = name.split('-') # extracts date, author, and title from file name
+            year, month, day, author, title, tags = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
 
@@ -358,12 +358,12 @@ def updatedb(whateverFile): #takes file as an argument
     cursor = connect.cursor()
 
     profanity, fdetails = check_profanity(whateverFile) # check txt file for cuss words, returns True if cuss words found and file details regardless
-    Date, Author, Title, small_content = fdetails[0], fdetails[1], fdetails[2], fdetails[3] #gets file details to add into database
+    Date, Author, Title, small_content, tags = fdetails[0], fdetails[1], fdetails[2], fdetails[3], fdetails[4] #gets file details to add into database
 
     docx2html(whateverFile, "", "") # converts docx to html
 
     #inserts file details into the database
-    cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, Profanity, small_content) VALUES('{Date}', '{Author}', '{Title}', '{profanity}', '{small_content}');")
+    cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, profanity, small_content, tags) VALUES('{Date}', '{Author}', '{Title}', '{profanity}', '{small_content}', '{tags}');")
     connect.commit()
     connect.close()
 
@@ -371,11 +371,11 @@ def updatedb(whateverFile): #takes file as an argument
 def fileMove():
     connect = sqlite3.connect("/var/www/html/Database/Master.db")
     cursor = connect.cursor()
-    cursor.execute("SELECT Title, Profanity FROM postDetails")
+    cursor.execute("SELECT Title, profanity FROM postDetails")
     result = cursor.fetchall()
     for row in result:
         name, profanity = row
-        
+
         os.replace(f"{name}.html", f"/var/www/html/Admin/{profanity}-posts/{name}.html")
 
 ######################################--End--######################################
