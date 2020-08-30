@@ -15,9 +15,10 @@
 </head>
 <body>
 <div class="">
-<form action="Upload.php" method="POST">
-<input type="file" name="FileChoose" id="filename">
+<form action="Upload.php" method="POST" enctype="multipart/form-data">
+<input type="file" name="file" id="file">
 <input type="submit" name="submit">
+
 </form>
 </div>
 <br><br>
@@ -80,9 +81,24 @@ include "../Database/connect.php";
 session_start();
 $username = $_SESSION['user'];
 if(!empty($_COOKIE[$username])) //changed isset() to empty()
-{ header("Location: index.php");
+{
+header("Location: index.php");
 }
-
-
-
 ?>
+<?php
+if(isset($_POST['submit']))
+	{
+$file=$_FILES['file'];
+$file_name=$file['name'];
+$file_type=$file['type'];
+$file_tmp_name=$file['tmp_name'];
+$file_extensions=end(explode('.',$file_name));
+
+if($file_extensions=="docx" && $file_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+ {
+  move_uploaded_file($file_tmp_name,"../Uploads/".$file_name);
+  echo "<script>alert('fuk')</script>";
+}
+}
+?>
+

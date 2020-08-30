@@ -56,11 +56,12 @@ elseif($decision == 'approve'){
 
     $row = $result->fetchArray();
 
-    $put_data = $db->prepare("INSERT INTO approvedPosts(Date, Author, Title, small_content) VALUES(?,?,?,?);");
+    $put_data = $db->prepare("INSERT INTO approvedPosts(Date, Author, Title, small_content, tags) VALUES(?,?,?,?,?);");
     $put_data->bindValue(1,$row['Date']);
     $put_data->bindValue(2,$row['Author']);
     $put_data->bindValue(3,$row['Title']);
     $put_data->bindValue(4,$row['small_content']);
+    $put_data->bindValue(5,$row['tags']);
     $put_data->execute();
 
     rename($row['Profanity']."-posts/".$title.".html", "../Blog/posts/$title.html"); //move approved file to blog posts
