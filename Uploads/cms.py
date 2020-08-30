@@ -83,10 +83,10 @@ def check_profanity(docfile):
             found_cuss_words.append(cuss) # appends found cuss words to the found_cuss_words list
             flag = 'red' # red if cuss words found 
         
-    fdetails = name.split("-") #in order to get date, author's name and title
-    year, month, day = fdetails[0], fdetails[1], fdetails[2]
+    fdetails = name.split("-") #year-month-day-author-tags-title
+    year, month, day, author, tags, title = fdetails[0], fdetails[1], fdetails[2], fdetails[3], fdetails[4], fdetails[5]
     Date = datetime.date(int(year), int(month), int(day))
-    fdetails = [Date, fdetails[3], fdetails[4], small_content, fdetails[5]]
+    fdetails = [Date, author, tags, small_content, title]
     return (flag, fdetails) # returns flag along with file details
 
 # prints all found cuss words
@@ -106,7 +106,7 @@ def docx2html(docxfile, header, footer):
         name = os.path.basename(docx_file.name) # gets name of text file
     
         try:
-            year, month, day, author, title, tags = name.split('-') # extracts date, author, and title from file name
+            year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
 
@@ -114,10 +114,12 @@ def docx2html(docxfile, header, footer):
         html = result.value
         date = year+month+day
     title = title[:-5] # removes '.docx' from name
-    
-    os.mkdir(f"/var/www/html/Includes/posts/images/{title}") # makes a new dir to store images, for card image
+    print(year,month,day,author,title,tags)
+    parent_dir = "/var/www/html/Includes/posts/images"
+    path = os.path.join(parent_dir, title)
+    os.mkdir(path) # makes a new dir to store images, for card image
     docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
-    
+
     #add css links
     links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
@@ -363,7 +365,7 @@ def updatedb(whateverFile): #takes file as an argument
     docx2html(whateverFile, "", "") # converts docx to html
 
     #inserts file details into the database
-    cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, profanity, small_content, tags) VALUES('{Date}', '{Author}', '{Title}', '{profanity}', '{small_content}', '{tags}');")
+    cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, profanity, small_content, tags) VALUES('{Date}', '{Author}', '{tags}', '{profanity}', '{small_content}', '{Title}');")
     connect.commit()
     connect.close()
 
