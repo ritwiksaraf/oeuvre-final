@@ -97,7 +97,7 @@ $file_extensions=end(explode('.',$file_name));
 if($file_extensions=="docx" && $file_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
  {
   move_uploaded_file($file_tmp_name,"../Uploads/".$file_name);
-  echo "<script>alert('fuk')</script>";
+  echo "<script>alert('Submission Successful')</script>";
 }
 }
 ?>

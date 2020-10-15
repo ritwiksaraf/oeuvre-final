@@ -1,0 +1,55 @@
+/**color of steps to use*/
+.box-steps-to-use {
+  
+  padding: 1%;
+}
+.boxprogramming {
+  padding: 2%;
+}
+p {
+  padding: 1%;
+}
+.card {
+  margin: 1%;
+  transition: 0.1s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+h3 {
+  padding: 2%;
+}
+
+svg {
+  align-items: baseline;
+  align-self: center;
+  align-content: center;
+  margin: 0 auto;
+}
+i:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+svg:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.outerbox{
+    background: -webkit-linear-gradient(bottom, #f8ffda, #ffe79ae3)
+}
+.containera{
+    background-color:white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 1%;
+}
+.icon img{
+    padding:2%; 
+    margin:10%;
+}
+

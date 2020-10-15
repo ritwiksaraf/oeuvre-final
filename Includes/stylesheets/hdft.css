@@ -1,7 +1,10 @@
 *{
   scroll-behavior: smooth;
 }
-
+*::selection{
+  color:#ff0e56;
+  background-color:rgba(230, 252, 170, 0.1); 
+}
 body{
   min-height: 100%;
   display:flex;
