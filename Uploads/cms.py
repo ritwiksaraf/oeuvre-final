@@ -1,9 +1,4 @@
-'''
-Author: Prajyot M. Chemburkar
-Date: 13th June, 2020
 
-provide docx files with name in the format "year-month-day-author-title.txt"
-'''
 
 import os
 # uses mammoth to extract txt from docx/convert docx to html
@@ -84,7 +79,7 @@ def check_profanity(docfile):
             flag = 'red' # red if cuss words found 
         
     fdetails = name.split("-") #year-month-day-author-tags-title
-    year, month, day, author, tags, title = fdetails[0], fdetails[1], fdetails[2], fdetails[3], fdetails[4], fdetails[5]
+    year, month, day, author, tags, title = fdetails[0], fdetails[1], fdetails[2], fdetails[3], fdetails[4], fdetails[5].replace(" ","_")
     Date = datetime.date(int(year), int(month), int(day))
     fdetails = [Date, author, tags, small_content, title]
     return (flag, fdetails) # returns flag along with file details
@@ -112,7 +107,7 @@ def docx2html(docxfile, header, footer):
 
         result = mammoth.convert_to_html(docx_file)
         html = result.value
-        date = year+month+day
+        date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
     parent_dir = "/var/www/html/Includes/posts/images"
@@ -213,7 +208,7 @@ def docx2html(docxfile, header, footer):
      <br><br>
 
         <div id="imagetitle" class="text-center">
-          <img src="/var/www/html/Includes/posts/{title}/image1.jpeg" class="img-fluid" alt="Responsive image">
+          <img src="/Includes/posts/images/{title}/image1.jpeg" class="img-fluid" alt="Responsive image">
         </div>
         <div class="containercontent"> <p class="text-center">
         {html}

@@ -64,7 +64,7 @@ elseif($decision == 'approve'){
     $put_data->bindValue(5,$row['tags']);
     $put_data->execute();
 
-    rename($row['Profanity']."-posts/".$title.".html", "../Blog/posts/$title.html"); //move approved file to blog posts
+    rename($row['Profanity']."-posts/".$title.".html", "../Blog/posts/".$title.".html"); //move approved file to blog posts
 
     $delete_data = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $delete_data->bindValue(1, $title);

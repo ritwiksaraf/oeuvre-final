@@ -28,7 +28,7 @@ include "../Database/connect.php";
     </div>
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand logold" href="Home.html"><img src="../Includes/img/logo.png"></a>
+            <a class="navbar-brand logold" href="Home.php"><img src="../Includes/img/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,8 +45,8 @@ include "../Database/connect.php";
                         <div class="dropdown nav-link ml-auto">
                             <button class="dropbtn" href="">ARCHIVES</button>
                             <div class="dropdown-content">
-                                <a href="archives-c.html">Creative</a>
-                                <a href="archives-i.html">Informative</a>
+                                <a href="archives-c.php">Creative</a>
+                                <a href="archives-i.php">Informative</a>
                             </div>
                         </div>
                     </li>

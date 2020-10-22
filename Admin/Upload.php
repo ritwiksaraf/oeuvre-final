@@ -14,12 +14,12 @@
     <title>Upload Article</title>
 </head>
 <body>
-<div class="">
+<div class="text-center">
 <form action="Upload.php" method="POST" enctype="multipart/form-data">
 <input type="file" name="file" id="file">
 <input type="submit" name="submit">
-
 </form>
+<button onclick="location.href='action.php'" type="button">Anazlyze</button>
 </div>
 <br><br>
 <!-- Site footer -->
@@ -96,7 +96,7 @@ $file_extensions=end(explode('.',$file_name));
 
 if($file_extensions=="docx" && $file_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
  {
-  move_uploaded_file($file_tmp_name,"../Uploads/".$file_name);
+  move_uploaded_file($file_tmp_name,"../Uploads/".str_replace(" ","_",$file_name));
   echo "<script>alert('Submission Successful')</script>";
 }
 }
