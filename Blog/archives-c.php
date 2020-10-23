@@ -15,7 +15,7 @@ include "../Database/connect.php";
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../Includes/stylesheets/hdft.css">
   <link rel="stylesheet" href="../Includes/stylesheets/archives-c.css">
-  <link rel="stylesheet" href="/Includes/stylesheets/dark-mode.css">
+  <link rel="stylesheet" href="../Includes/stylesheets/dark-mode.css">
 </head>
 
 <body>
