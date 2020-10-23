@@ -76,7 +76,7 @@ if (empty($username)){
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3 sticky">
-        <!--don't remove bg& fixed or effect will not take place-->
+        <!--dont remove bg& fixed or effect will not take place-->
         <!--even sticky-right works -->
         <section id="leftnavbar">
           <h5 class="display-5 text-center"><i>Navigation Menu</i></h5>

@@ -73,7 +73,7 @@ if (empty($username)){
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3 ">
-        <!--!don't remove bg& fixed or effect will not take place-->
+        <!--!dont remove bg& fixed or effect will not take place-->
         <!--?even sticky-right works -->
         <section id="leftnavbar">
           <h5 class="display-5 text-center"><i>Navigation Menu</i></h5>
@@ -134,7 +134,7 @@ if (empty($username)){
                     alt="Card image cap"></a>
                 <div class="card-body">
                   <h5 class="card-title">IKIGAI Boom</h5>
-                  <p class="card-text">Life is nature's gift to beings that makes them sentient...</p>
+                  <p class="card-text">Life is natures gift to beings that makes them sentient...</p>
                   <a href="posts/Creative/blog4.html" class="btn">View Article</a>
                 </div>
               </div>
@@ -157,7 +157,7 @@ if (empty($username)){
                     alt="Card image cap"></a>
                 <div class="card-body">
                   <h5 class="card-title">Purpose</h5>
-                  <p class="card-text">A sudden urge arises to make meaningful use of the time given to us...</p>
+                  <p class="card-text">A sudden urge arises to make meaningful use_ of the time given to us...</p>
                   <a href="posts/Creative/blog3.html" class="btn">View Article</a>
                 </div>
               </div>
