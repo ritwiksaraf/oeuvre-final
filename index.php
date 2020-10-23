@@ -5,14 +5,14 @@
 <?php
 
 $username= $_POST['user'];
-$password= hash("sha256", $_POST['pass']);
+   $password= hash("sha256", $_POST['pass']);
 
    $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
    $statement->bindValue(1, $username);
    $statement->bindValue(2, $password);
    $result = $statement->execute();
 
-
+   if(!empty($username) && !empty($password)){
    if(empty($result->fetchArray(SQLITE3_ASSOC))){
        echo "<script>alert('Invalid Credentials')</script>";
        }
@@ -23,7 +23,7 @@ $password= hash("sha256", $_POST['pass']);
        setcookie($username, $random, time()+3600);
        header("Location: Blog/home.php");
        }
-
+   }
 
 ?>
 <!doctype html>
