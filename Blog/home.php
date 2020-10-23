@@ -6,6 +6,7 @@ $username = $_SESSION['user'];
 if (!empty($_COOKIE[$username])){
     header("Location: ../index.php");
 }
+?>
 <!doctype html>
 <html>
 
