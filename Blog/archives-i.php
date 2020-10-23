@@ -1,3 +1,14 @@
+<?php
+
+include '../Database/connect.php';
+session_start();
+
+$username = $_SESSION['user'];
+
+if (empty($username)){
+	header("Location: ../index.php");
+}
+
 <!doctype html>
 <html>
 
@@ -65,8 +76,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3 sticky">
-        <!--!don't remove bg& fixed or effect will not take place-->
-        <!--!even sticky-right works -->
+        <!--don't remove bg& fixed or effect will not take place-->
+        <!--even sticky-right works -->
         <section id="leftnavbar">
           <h5 class="display-5 text-center"><i>Navigation Menu</i></h5>
           <div class="accordion shadow" id="accordionExample">
