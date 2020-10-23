@@ -1,7 +1,12 @@
 <?php
 
 include '../Database/connect.php';
+session_start();
 
+$username = $_SESSION['user'];
+
+if (empty($username)){
+	header("Location: ../index.php");
 }
 
 <!doctype html>
