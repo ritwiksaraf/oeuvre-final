@@ -3,6 +3,32 @@
 
 ?>
 
+<?php
+$username=$_POST['user'];
+$password= hash("sha256", $_POST['pass']);
+
+$sql = "SELECT * FROM prepare WHERE usrename='".$username."' and  password='".$password."' ";
+
+$result = $conn->query($sql);
+
+
+if (mysqli_num_rows($result) == 1) 
+    {
+
+        session_start();
+            $_SESSION['user'] = $username;
+            $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
+            setcookie($username, $random, time()+3600);
+            header("Location: Blog/home.php");
+
+    }
+    else
+    {
+        echo " <center><h2>Invalid Login Details </h2> </center> ";
+        
+    }
+    
+?>
 <!doctype html>
 <html lang="en">
 
@@ -53,9 +79,9 @@
                         <h1 class="text-center">Login</h1>
                         <br>
                         <form action='index.php' method="POST">
-                            <input type="email" id="exampleInputEmail1" class="form-control" id="user"
+                            <input type="email" id="exampleInputEmail1" class="form-control" id="user" name="user"
                                 placeholder="Email" style="margin-bottom:1vw;">
-                            <input type="password" id="exampleInputPassword1" class="form-control" id="pass"
+                            <input type="password" id="exampleInputPassword1" class="form-control" id="pass" name="pass"
                                 placeholder="Password" style="margin-bottom:1vw;">
                             <input type="checkbox" required id="privacypolicycheckbox" name="privacypolicycheckbox"
                                 value="check">
@@ -207,27 +233,3 @@
 
 </html>
 
-<?php
-
-$username= $_POST['user'];
-$password= hash("sha256", $_POST['pass']);
-
-   $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
-   $statement->bindValue(1, $username);
-   $statement->bindValue(2, $password);
-   $result = $statement->execute();
-
-if(isset($username) && isset($password)){
-   if(empty($result->fetchArray(SQLITE3_ASSOC))){
-       echo "<script>alert('Invalid Credentials')</script>";
-       }
-   else{
-       session_start();
-       $_SESSION['user'] = $username;
-       $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
-       setcookie($username, $random, time()+3600);
-       header("Location: Blog/home.php");
-       }
-   }
-
-?>
