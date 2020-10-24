@@ -12,7 +12,7 @@ $username= $_POST['user'];
    $statement->bindValue(2, $password);
    $result = $statement->execute();
 
-   if(!empty($username) && !empty($password)){
+if(!empty($username) && !empty($password)){
    if(empty($result->fetchArray(SQLITE3_ASSOC))){
        echo "<script>alert('Invalid Credentials')</script>";
        }
