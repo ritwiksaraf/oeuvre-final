@@ -11,16 +11,17 @@
     $statement->bindValue(2, $password);
     $result = $statement->execute();
 
-    if(!empty($username) && !empty($password)){
+if(isset($username) && isset($password)){
     if(empty($result->fetchArray(SQLITE3_ASSOC))){
         echo "<script>alert('Invalid Credentials')</script>";
         }
     else{
         session_start();
+        header("Location: Blog/home.php");
         $_SESSION['user'] = $username;
         $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
         setcookie($username, $random, time()+3600);
-        header("Location: Blog/home.php");
+        
         }
     }
 
