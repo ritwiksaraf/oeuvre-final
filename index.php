@@ -5,14 +5,14 @@
 <?php
 
 $username= $_POST['user'];
-   $password= hash("sha256", $_POST['pass']);
+$password= hash("sha256", $_POST['pass']);
 
    $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
    $statement->bindValue(1, $username);
    $statement->bindValue(2, $password);
    $result = $statement->execute();
 
-if(!empty($username) && !empty($password)){
+if(isset($username) && isset($password)){
    if(empty($result->fetchArray(SQLITE3_ASSOC))){
        echo "<script>alert('Invalid Credentials')</script>";
        }
@@ -76,9 +76,9 @@ if(!empty($username) && !empty($password)){
                         <h1 class="text-center">Login</h1>
                         <br>
                         <form action='index.php' method="POST">
-                            <input type="email" id="exampleInputEmail1" class="form-control" name="user"
+                            <input type="email" id="exampleInputEmail1" class="form-control" id="user"
                                 placeholder="Email" style="margin-bottom:1vw;">
-                            <input type="password" id="exampleInputPassword1" class="form-control" name="pass"
+                            <input type="password" id="exampleInputPassword1" class="form-control" id="pass"
                                 placeholder="Password" style="margin-bottom:1vw;">
                             <input type="checkbox" required id="privacypolicycheckbox" name="privacypolicycheckbox"
                                 value="check">
