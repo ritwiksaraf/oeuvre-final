@@ -3,7 +3,7 @@
 include '../Database/connect.php';
 session_start();
 $username = $_SESSION['user'];
-if (empty($_COOKIE[$username])){
+if (isset($_COOKIE[$username])){
     header("Location: ../index.php");
 }
 ?>
