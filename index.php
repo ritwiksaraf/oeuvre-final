@@ -17,7 +17,7 @@ if(isset($username) && isset($password)){
         }
     else{
         session_start();
-        header("Location: Blog/home.php");
+        echo '<script type="text/javascript"> window.location="Blog/home.php";</script>';
         $_SESSION['user'] = $username;
         $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
         setcookie($username, $random, time()+3600);
