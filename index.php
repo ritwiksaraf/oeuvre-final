@@ -1,34 +1,32 @@
 <?php
     include 'Database/connect.php';
 
-?>
-
-<?php
-$username=$_POST['user'];
-$password= hash("sha256", $_POST['pass']);
-
-$sql = "SELECT * FROM prepare WHERE usrename='".$username."' and  password='".$password."' ";
-
-$result = $conn->query($sql);
 
 
-if (mysqli_num_rows($result) == 1) 
-    {
+    $username= $_POST['user'];
+    $password= hash("sha256", $_POST['pass']);
 
+    $statement = $db->prepare('SELECT * FROM User WHERE username=? AND password=?');
+    $statement->bindValue(1, $username);
+    $statement->bindValue(2, $password);
+    $result = $statement->execute();
+
+    if(!empty($username) && !empty($password)){
+    if(empty($result->fetchArray(SQLITE3_ASSOC))){
+        echo "<script>alert('Invalid Credentials')</script>";
+        }
+    else{
         session_start();
-            $_SESSION['user'] = $username;
-            $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
-            setcookie($username, $random, time()+3600);
-            header("Location: Blog/home.php");
+        $_SESSION['user'] = $username;
+        $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
+        setcookie($username, $random, time()+3600);
+        header("Location: Blog/home.php");
+        }
+    }
 
-    }
-    else
-    {
-        echo " <center><h2>Invalid Login Details </h2> </center> ";
-        
-    }
-    
 ?>
+
+
 <!doctype html>
 <html lang="en">
 
