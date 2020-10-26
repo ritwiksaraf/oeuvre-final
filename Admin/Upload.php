@@ -1,3 +1,15 @@
+
+<?php
+
+include '../Database/connect.php';
+session_start();
+
+$username = $_SESSION['user'];
+
+if (empty($username)){
+	header("Location: index.php");
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,15 +88,7 @@
 <script src="../Includes/scripts/overlay.js"></script>
 <script src="/Includes/scripts/file-upload.js"></script>
 </html>
-<?php
-include "../Database/connect.php";
-session_start();
-$username = $_SESSION['user'];
-if(!empty($_COOKIE[$username])) //changed isset() to empty()
-{
-header("Location: index.php");
-}
-?>
+
 <?php
 if(isset($_POST['submit']))
 	{
