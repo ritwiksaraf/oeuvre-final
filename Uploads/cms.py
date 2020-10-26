@@ -208,7 +208,7 @@ def docx2html(docxfile, header, footer):
      <br><br>
 
         <div id="imagetitle" class="text-center">
-          <img src="/Includes/posts/images/{title}/image1.jpeg" class="img-fluid" alt="Responsive image">
+          <!--<img src="/Includes/posts/images/{title}/image1.jpeg" class="img-fluid" alt="Responsive image">-->
         </div>
         <div class="containercontent"> <p class="text-center">
         {html}
