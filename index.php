@@ -63,7 +63,7 @@
                             <label for="privacypolicycheckbox">I have read and agreed to the <a style="color:blue; "
                                     onclick="myFunction()">policy
                                     documents</a></label><br>
-                            <input type="submit" class="btn btn-block btn-danger" value="Log In" name="sumbit-btn">
+                                    <input type="submit" class="btn btn-danger" value="Log In" name="sumbit-btn">
                         </form><br>
                         <p>Are you an admin?Click <a href="Admin/">here </a>to login</p>
                     </div>
