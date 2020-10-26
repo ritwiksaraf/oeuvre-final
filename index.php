@@ -10,7 +10,7 @@
     $result = $statement->execute();
 
     if(!empty($username) && !empty($password)){
-        if(isset($result-> fetchArray(SQLITE3_ASSOC))){
+        if(!empty($result-> fetchArray(SQLITE3_ASSOC))){
             session_start();
             $_SESSION['user'] = $username;
             $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
