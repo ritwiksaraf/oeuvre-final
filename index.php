@@ -210,6 +210,7 @@
 
 
 <?php
+
     $username= $_POST['user'];
     $password= hash("sha256", $_POST['pass']);
 
@@ -218,17 +219,16 @@
     $statement->bindValue(2, $password);
     $result = $statement->execute();
 
-if(isset($username) && isset($password)){
+    if(!empty($username) && !empty($password)){
     if(empty($result->fetchArray(SQLITE3_ASSOC))){
         echo "<script>alert('Invalid Credentials')</script>";
         }
     else{
         session_start();
-        header("Location: Blog/home.php");
         $_SESSION['user'] = $username;
         $random = md5(rand(1,1000)); //encoded with md5, avoid bad string output.
-        setcookie($username, $random, time()+(8400));
-        
+        setcookie($username, $random, time()+3600);
+        header("Location: Blog/home.php");
         }
     }
 
