@@ -203,7 +203,7 @@ def docx2html(docxfile, header, footer):
 
 
         <!-----------------title-->
-        <h3 class="display-3 text-center" >{title}</h3>
+        <h3 class="display-3 text-center" >{title.replace("_"," ")}</h3>
         
      <br><br>
 
