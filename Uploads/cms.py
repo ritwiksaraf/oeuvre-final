@@ -121,7 +121,7 @@ def docx2html(docxfile, header, footer):
               docx.extract(info.filename, destinationpath)
       docx.close()
     imgextractor(docxfile,"/tmp/")
-    os.replace("/tmp/word/media/","/var/www/html/Includes/posts/images/{title}/")
+    os.replace("/tmp/word/media/",f"/var/www/html/Includes/posts/images/{title}/")
 
     #docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
 
