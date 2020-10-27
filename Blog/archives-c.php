@@ -1,11 +1,7 @@
 <?php
 
 include '../Database/connect.php';
-session_start();
-$username = $_SESSION['user'];
-if (empty($_COOKIE[$username])){
-    header("Location: ../index.php");
-}
+
 ?>
 <!doctype html>
 <html>
@@ -105,6 +101,7 @@ if (empty($_COOKIE[$username])){
         <div class="container">
           <div class="row text-center">
                         <?php
+                        session_start();
             $statement = $db->prepare("select * From approvedPosts where tags='c';");
             $result = $statement->execute();
             while ($row = $result->fetchArray()){ ?>
