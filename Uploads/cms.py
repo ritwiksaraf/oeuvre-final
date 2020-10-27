@@ -106,7 +106,7 @@ def docx2html(docxfile, header, footer):
         except:
             exit()
 
-        html = (docxpy(docx_file)).value
+        html = docxpy.process(docx_file)
         date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
