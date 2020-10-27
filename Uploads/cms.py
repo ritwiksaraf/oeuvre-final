@@ -106,8 +106,7 @@ def docx2html(docxfile, header, footer):
         except:
             exit()
 
-        result = mammoth.convert_to_html(docx_file)
-        html = result.value
+        html = (mammoth.extract_raw_text(docx_file)).value
         date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
@@ -216,7 +215,7 @@ def docx2html(docxfile, header, footer):
      <br><br>
 
         <div id="imagetitle" class="text-center">
-          <!--<img src="/Includes/posts/images/{title}/image1.jpg" class="img-fluid" alt="Responsive image">-->
+          <img src="/Includes/posts/images/{title}/image1.jpg" class="img-fluid" alt="Responsive image">
         </div>
         <div class="containercontent"> <p class="text-center">
         {html}
