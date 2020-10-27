@@ -113,7 +113,7 @@ def docx2html(docxfile, header, footer):
     parent_dir = "/var/www/html/Includes/posts/images"
     path = os.path.join(parent_dir, title)
     os.mkdir(path) # makes a new dir to store images, for card image
-    docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/image1.jpg") # extract and save images
+    docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
 
     #add css links
     links = '<meta charset="utf-8">'
