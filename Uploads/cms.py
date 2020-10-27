@@ -4,7 +4,8 @@ import os
 # uses mammoth to extract txt from docx/convert docx to html
 import mammoth
 # uses docx2txt to extract images
-import docx2txt
+import zipfile
+
 import datetime
 #BeautifulSoup to prettify the html doc
 from bs4 import BeautifulSoup as bs
@@ -113,7 +114,16 @@ def docx2html(docxfile, header, footer):
     parent_dir = "/var/www/html/Includes/posts/images"
     path = os.path.join(parent_dir, title)
     os.mkdir(path) # makes a new dir to store images, for card image
-    docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
+    def imgextractor(docxpath,destinationpath):
+      docx=zipfile.ZipFile(docxpath)
+      for info in docx.infolist():
+          if info.filename.endswith((".png",".jpg",".jpeg",".gif")):
+              docx.extract(info.filename, destinationpath)
+      docx.close()
+    imgextractor(docxfile,"/tmp/")
+    os.replace("/tmp/word/media/","/var/www/html/Includes/posts/images/{title}/")
+
+    #docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
 
     #add css links
     links = '<meta charset="utf-8">'
