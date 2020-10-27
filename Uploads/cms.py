@@ -123,8 +123,6 @@ def docx2html(docxfile, header, footer):
     imgextractor(docxfile,"/tmp/")
     os.replace("/tmp/word/media/",f"/var/www/html/Includes/posts/images/{title}/")
 
-    #docx2txt.process(docxfile, f"/var/www/html/Includes/posts/images/{title}/") # extract and save images
-
     #add css links
     links = '<meta charset="utf-8">'
     links += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
