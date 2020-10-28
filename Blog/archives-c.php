@@ -65,6 +65,25 @@ include '../Database/connect.php';
   </section>
   <!--!navigation bar end-->
   <br><br>  
+  <h4 class="display-4 text-center">Creative Posts</h4>
+  <?php
+                        session_start();
+            $statement = $db->prepare("select * From approvedPosts where tags='creative';");
+            $result = $statement->execute();
+            while ($row = $result->fetchArray()){ ?>
+              <div class="col-md-4 pb-1 pb-md-0">
+                  <div class="card shadow bg-light">
+                      <a href="posts/<?php echo $row['Title']; ?>.html"><img class="card-img-top"
+                              src="../Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"
+                              alt="Card image cap"></a>
+                      <div class="card-body">
+                          <h5 class="card-title"><?php echo str_replace("_"," ", $row['Title']); ?></h5>
+                          <p class="card-text"><?php echo $row['small_content']; ?></p>
+                          <a href="posts/<?php echo $row['Title']; ?>.html" class="btn">View Article</a>
+                      </div>
+                  </div>
+              </div>
+              <?php } ?>
         <!--!Graphics start-->
         <h4 class="display-4 text-center">Graphics</h4>
         <div class="container">
