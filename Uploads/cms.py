@@ -4,7 +4,7 @@ import os
 # uses mammoth to extract txt from docx/convert docx to html
 import mammoth
 # uses docx2txt to extract images
-import docxpy
+import docx
 import zipfile
 import datetime
 #BeautifulSoup to prettify the html doc
@@ -105,8 +105,7 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-
-        html = docxpy.process(docx_file)
+        html = getText(docx_file)
         date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
