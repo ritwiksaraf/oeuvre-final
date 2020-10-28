@@ -111,7 +111,6 @@ def docx2html(docxfile, header, footer):
       for para in documentfinal.paragraphs:
           fullText.append(para.text)
       return '\n'.join(fullText)
-      html = getText(documentfilename)
     html = getText(docx_file)
     date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name

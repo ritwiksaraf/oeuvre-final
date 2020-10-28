@@ -104,7 +104,7 @@ include '../Database/connect.php';
           <div class="row text-center">
                         <?php
                         session_start();
-            $statement = $db->prepare("select * From approvedPosts where tags='i';");
+            $statement = $db->prepare("select * From approvedPosts where tags='informative';");
             $result = $statement->execute();
             while ($row = $result->fetchArray()){ ?>
               <div class="col-md-4 pb-1 pb-md-0">
