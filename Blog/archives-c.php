@@ -65,61 +65,6 @@ include '../Database/connect.php';
   </section>
   <!--!navigation bar end-->
   <br><br>  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-3 ">
-        <!--!dont remove bg& fixed or effect will not take place-->
-        <!--?even sticky-right works -->
-        <section id="leftnavbar">
-          <h5 class="display-5 text-center"><i>Navigation Menu</i></h5>
-          <div class="accordion shadow" id="accordionExample">
-            <div class="card bg-primary">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn  btn-block " type="button" data-toggle="collapse" data-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Creative
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <a href="#articlescroll" type="button" class="btn btn-secondary btn-block">Articles</a>
-                  <a href="#poemscroll" type="button" class="btn btn-secondary  btn-block">Poems</a>
-                  <a href="#graphicscroll" type="button" class="btn btn-secondary  btn-block">Graphics</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <br>
-      <div class="col-lg-9 bg-light">
-        <!--Todo -creative Starts Here-->
-        <h3 id="articlescroll" class="display-3 text-center">Creative Section</h3>
-        <hr>
-        <div class="container">
-          <div class="row text-center">
-                        <?php
-                        session_start();
-            $statement = $db->prepare("select * From approvedPosts where tags='creative';");
-            $result = $statement->execute();
-            while ($row = $result->fetchArray()){ ?>
-              <div class="col-md-4 pb-1 pb-md-0">
-                  <div class="card shadow bg-light">
-                      <a href="posts/<?php echo $row['Title']; ?>.html"><img class="card-img-top"
-                              src="../Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"
-                              alt="Card image cap"></a>
-                      <div class="card-body">
-                          <h5 class="card-title"><?php echo str_replace("_"," ", $row['Title']); ?></h5>
-                          <p class="card-text"><?php echo $row['small_content']; ?></p>
-                          <a href="posts/<?php echo $row['Title']; ?>.html" class="btn">View Article</a>
-                      </div>
-                  </div>
-              </div>
-              <?php } ?>
-          </div>
-      </div>
         <!--!Articles start-->
         <h4 class="display-4 text-center">Articles</h4>
         <div class="container">
