@@ -110,7 +110,7 @@ if (empty($username)){
           $result = $statement->execute();
           while ($row = $result->fetchArray()){ ?>
             <div class="col-md-4 pb-1 pb-md-0">
-                <div class="card shadow bg-light">
+                <div class="card shadow bg-primary">
                     <a href="posts/<?php echo $row['Title']; ?>.html"><img class="card-img-top"
                             src="/Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"
                             alt="Card image cap"></a>

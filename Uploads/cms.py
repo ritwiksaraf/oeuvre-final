@@ -135,7 +135,15 @@ def docx2html(docxfile, header, footer):
 
     #create a temp file, its gonna be difficult to read
     with open("temp_html", "w+") as html_file:
-        html_file.write(f"""<!doctype html>
+        html_file.write(f"""
+        <?php
+
+include '../Database/connect.php';
+
+?>
+
+        
+        <!doctype html>
 <html lang="en">
 <head>
   <!-- Required meta tags -->
@@ -198,16 +206,10 @@ def docx2html(docxfile, header, footer):
   <!--navigation bar end-->
 
 <br><br><br>
-<div class="container-fluid">
-
-  <div class="row">
-
 
    <!----------left articles side-start--->
 
-    <div   class="col-lg-9 bg-light">
-
-
+  <?php include '/var/www/html/Blog/featuredc.php' ?>
         <!-----------------title-->
         <h3 class="display-3 text-center" >{title.replace("_"," ")}</h3>
         
