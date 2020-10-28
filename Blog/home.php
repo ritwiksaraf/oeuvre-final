@@ -133,13 +133,13 @@ if (empty($username)){
                 <!------->
                 <div class="col-md-6 pb-1 pb-md-0">
                     <div class="card shadow bg-primary">
-                        <a href="archives-c.html"><img class="card-img-top" src="../Includes/img/creative.png"
+                        <a href="archives-c.php"><img class="card-img-top" src="../Includes/img/creative.png"
                                 alt="Card image cap"></a>
                     </div>
                 </div>
                 <div class="col-md-6 pb-1 pb-md-0">
                     <div class="card shadow bg-primary">
-                        <a href="archives-i.html"><img class="card-img-top" src="../Includes/img/informative.png"
+                        <a href="archives-i.php"><img class="card-img-top" src="../Includes/img/informative.png"
                                 alt="Card image cap"></a>
                     </div>
                 </div>
@@ -167,13 +167,13 @@ if (empty($username)){
                 <div class="col-xs-6 col-md-3">
                     <h6 class="text-center">Sections</h6>
                     <ul class="footer-links" style="text-align:center;">
-                        <li><a href="archives-c.html#articlescroll">Articles</a></li>
-                        <li><a href="archives-c.html#poemscroll">Poems</a></li>
-                        <li><a href="archives-c.html#graphicscroll">Graphic Arts</a></li>
+                        <li><a href="archives-c.php#articlescroll">Articles</a></li>
+                        <li><a href="archives-c.php#poemscroll">Poems</a></li>
+                        <li><a href="archives-c.php#graphicscroll">Graphic Arts</a></li>
                         <br>
                         <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="archives-i.html#guidancescroll">Senior Guidance</a></li>
-                        <li><a href="archives-i.html#tutorialscroll">Tutorials</a></li>
+                        <li><a href="archives-i.php#guidancescroll">Senior Guidance</a></li>
+                        <li><a href="archives-i.php#tutorialscroll">Tutorials</a></li>
                     </ul>
                 </div>
             </div>
