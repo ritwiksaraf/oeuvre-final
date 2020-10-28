@@ -126,7 +126,12 @@
   transition: 0.1s;
   }
 
-
+img{
+  height: 1.5vw;
+  width: 70%;
+  overflow: hidden;
+  border: #000, 1px;
+}
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {

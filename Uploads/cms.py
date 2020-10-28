@@ -92,10 +92,6 @@ def show_cuss_words():
 
 ######################################--End--######################################
 
-#################-function for images removal-####################
-def convert_image(image):
-    with image.open() as image_bytes:
-        return None
 ######################################--conversion functions--######################################    
 
 #converts docx file to html
@@ -109,7 +105,7 @@ def docx2html(docxfile, header, footer):
         except:
             exit()
     
-    html = mammoth.convert_to_html(docx_file, convert_image=mammoth.images.img_element(convert_image))
+    html = mammoth.convert_to_html(docx_file)
     date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
@@ -218,7 +214,7 @@ def docx2html(docxfile, header, footer):
      <br><br>
 
         <div id="imagetitle" class="text-center">
-          <img src="/Includes/posts/images/{title}/image1.jpg" class="img-fluid" alt="Responsive image">
+          <img src="var/www/html/Includes/posts/images/{title}/image1.jpg" class="img-fluid imgclass" alt="Responsive image">
         </div>
         <div class="containercontent"> <p class="text-center">
         {html}
