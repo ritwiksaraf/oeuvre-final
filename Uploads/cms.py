@@ -105,10 +105,10 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-    def getText(filename):
-      doc = docx.Document(filename)
+    def getText(documentfilename):
+      documentfinal = docx.Document(documentfilename)
       fullText = []
-      for para in doc.paragraphs:
+      for para in documentfinal.paragraphs:
           fullText.append(para.text)
       return '\n'.join(fullText)
 
