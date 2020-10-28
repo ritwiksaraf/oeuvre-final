@@ -160,7 +160,7 @@ def docx2html(docxfile, header, footer):
   </div>
   <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand logold" href="../../Home.php"><img src="/Includes/img/logo.png"></a>
+      <a class="navbar-brand logold" href="/Blog/home.php"><img src="/Includes/img/logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -177,19 +177,19 @@ def docx2html(docxfile, header, footer):
             <div class="dropdown nav-link ml-auto">
               <button class="dropbtn" href="">ARCHIVES</button>
               <div class="dropdown-content">
-                <a href="../../archives-c.html">Creative</a>
-                <a href="../../archives-i.html">Informative</a>
+                <a href="/Blog/archives-c.php">Creative</a>
+                <a href="/Blog/archives-i.php">Informative</a>
               </div>
             </div>
           </li>
           <li class="nav-item ml-auto">
-            <a class="nav-link" href="../../faq.html">F.A.Q.</a>
+            <a class="nav-link" href="/Blog/faq.html">F.A.Q.</a>
           </li>
           <li class="nav-item ml-auto">
-            <a class="nav-link" href="../../construction.html">HUMANS OF AGNELS</a>
+            <a class="nav-link" href="/Blog/construction.html">HUMANS OF AGNELS</a>
           </li>
           <li class="nav-item ml-auto">
-            <a class="nav-link" href="../../aboutus.html">ABOUT US</a>
+            <a class="nav-link" href="/Blog/aboutus.html">ABOUT US</a>
           </li>
         </ul>
       </div>
@@ -227,60 +227,6 @@ def docx2html(docxfile, header, footer):
           <br>
         </div>
         </div>
- <!--todo right hand side articles-->
-      <div class="col-lg-3 sticky ">
-        <h3 class="display-4 text-center">Trending Now</h3>
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-sm-12 pb-1 pb-md-0">
-              <div class="card shadow bg-primary">
-                <a href="blog1.html"><img class="card-img-top" src="img/blog1.png" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">An Inanimate Fable</h5>
-                  <p class="card-text">I refuse to write a fable about the beautiful moments...</p>
-                  <a href="blog1.html" class="btn">View Article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 pb-1 pb-md-0">
-              <div class="card shadow bg-primary">
-                <a href="blog3.html"><img class="card-img-top" src="img/blog3.png" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Purpose</h5>
-                  <p class="card-text">A sudden urge arises to make meaningful use of the time given to us...</p>
-                  <a href="blogs/blog3.html" class="btn">View Article</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row text-center mt-4">
-            <div class="col-sm-12 pb-1 pb-md-0">
-              <div class="card shadow bg-primary">
-                <a href="blog4.html"><img class="card-img-top" src="img/blog4.png" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">IKIGAI Boom</h5>
-                  <p class="card-text">Life is nature's gift to beings that makes them sentient...</p>
-                  <a href="blog4.html" class="btn">View Article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 pb-1 pb-md-0">
-              <div class="card shadow bg-primary">
-                <a href="blog6.html"><img class="card-img-top" src="img/blog6.png" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">The Melancholy War</h5>
-                  <p class="card-text">Every night I bid the stars goodbye,
-                    <br>
-                    to blow my scars into the blue dye.....</p>
-                  <a id="librarykeliescroll" href="blog6.html" class="btn">View Article</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <br><br>
   <!-- todo Site footer -->
   <footer class="site-footer">
@@ -299,13 +245,13 @@ def docx2html(docxfile, header, footer):
         <div class="col-xs-6 col-md-3">
           <h6 class="text-center">Sections</h6>
           <ul class="footer-links" style="text-align:center;">
-            <li><a href="../archives-c.html#articlescroll">Articles</a></li>
-            <li><a href="../archives-c.html#poemscroll">Poems</a></li>
-            <li><a href="../archives-c.html#graphicscroll">Graphic Arts</a></li>
+            <li><a href="/Blog/archives-c.php#articlescroll">Articles</a></li>
+            <li><a href="/Blog/archives-c.php#poemscroll">Poems</a></li>
+            <li><a href="/Blog/archives-c.php#graphicscroll">Graphic Arts</a></li>
             <br>
-            <li><a href="../faq.html">FAQ</a></li>
-            <li><a href="../archives-i.html#guidancescroll">Senior Guidance</a></li>
-            <li><a href="../archives-i.html#tutorialscroll">Tutorials</a></li>
+            <li><a href="/Blog/faq.html">FAQ</a></li>
+            <li><a href="/Blog/archives-i.php#guidancescroll">Senior Guidance</a></li>
+            <li><a href="/Blog/archives-i.php#tutorialscroll">Tutorials</a></li>
           </ul>
         </div>
       </div>
