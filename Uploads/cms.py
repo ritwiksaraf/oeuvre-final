@@ -91,7 +91,15 @@ def show_cuss_words():
         print(cuss)
 
 ######################################--End--######################################
-
+####################-functions-#################
+def getText(documentfilename):
+  with open(documentfilename,"r") as msdoc:
+    documentfinal = docx.Document(msdoc)
+    fullText = []
+    for para in documentfinal.paragraphs:
+        fullText.append(para.text)
+  return '\n'.join(fullText)
+####################-end of functions-##########
 
 ######################################--conversion functions--######################################    
 
@@ -105,13 +113,6 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-    def getText(documentfilename):
-      with open(documentfilename,"r") as msdoc:
-        documentfinal = docx.Document(msdoc)
-        fullText = []
-        for para in documentfinal.paragraphs:
-            fullText.append(para.text)
-      return '\n'.join(fullText)
     html = getText(docx_file)
     date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
