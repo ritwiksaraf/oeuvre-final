@@ -107,7 +107,7 @@ def docx2html(docxfile, header, footer):
             exit()
     def getText(documentfilename):
       with open(documentfilename,"rb") as msdoc:
-        documentfinal = docx.Document(documentfilename)
+        documentfinal = docx.Document(msdoc)
         fullText = []
         for para in documentfinal.paragraphs:
             fullText.append(para.text)
