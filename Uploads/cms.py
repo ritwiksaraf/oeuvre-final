@@ -93,7 +93,7 @@ def show_cuss_words():
 ######################################--End--######################################
 ####################-functions-#################
 def getText(documentfilename):
-  documentfinal = docx.Document(msdoc)
+  documentfinal = docx.Document(documentfilename)
   fullText = []
   for para in documentfinal.paragraphs:
       fullText.append(para.text)
