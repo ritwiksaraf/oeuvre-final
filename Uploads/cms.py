@@ -91,15 +91,11 @@ def show_cuss_words():
         print(cuss)
 
 ######################################--End--######################################
-####################-functions-#################
-def getText(documentfilename):
-  documentfinal = docx.Document(documentfilename)
-  fullText = []
-  for para in documentfinal.paragraphs:
-      fullText.append(para.text)
-  return '\n'.join(fullText)
-####################-end of functions-##########
 
+#################-function for images removal-####################
+def convert_image(image):
+    with image.open() as image_bytes:
+        return None
 ######################################--conversion functions--######################################    
 
 #converts docx file to html
@@ -112,7 +108,8 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-    html = getText(docxfile)
+    
+    html = mammoth.convert_to_html(docx_file, convert_image=mammoth.images.img_element(convert_image))
     date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
