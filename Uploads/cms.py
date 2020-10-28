@@ -105,8 +105,15 @@ def docx2html(docxfile, header, footer):
             year, month, day, author, tags, title = name.split('-') # extracts date, author, and title from file name
         except:
             exit()
-        html = getText(docx_file)
-        date = day+"-"+month+"-"+year
+    def getText(filename):
+      doc = docx.Document(filename)
+      fullText = []
+      for para in doc.paragraphs:
+          fullText.append(para.text)
+      return '\n'.join(fullText)
+
+    html = getText(docx_file)
+    date = day+"-"+month+"-"+year
     title = title[:-5] # removes '.docx' from name
     print(year,month,day,author,title,tags)
     parent_dir = "/var/www/html/Includes/posts/images"
