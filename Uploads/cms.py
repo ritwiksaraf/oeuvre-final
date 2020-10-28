@@ -106,10 +106,11 @@ def docx2html(docxfile, header, footer):
         except:
             exit()
     def getText(documentfilename):
-      documentfinal = docx.Document(documentfilename)
-      fullText = []
-      for para in documentfinal.paragraphs:
-          fullText.append(para.text)
+      with open(documentfilename,"r") as msdoc:
+        documentfinal = docx.Document(documentfilename)
+        fullText = []
+        for para in documentfinal.paragraphs:
+            fullText.append(para.text)
       return '\n'.join(fullText)
     html = getText(docx_file)
     date = day+"-"+month+"-"+year
