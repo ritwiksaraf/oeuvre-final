@@ -207,14 +207,23 @@ include '../Database/connect.php';
 
 <br><br><br>
 
-   <!----------left articles side-start--->
-
+<!--articles-->
+      <div class="col-lg-3 sticky ">
+        <h3 class="display-4 text-center">Trending Now</h3>
+        <div class="container">
+          <div class="row text-center">
   <?php include '/var/www/html/Blog/featuredc.php' ?>
+</div>
+</div>
+</div>
         <!-----------------title-->
+        <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9 bg-light">
         <h3 class="display-3 text-center" >{title.replace("_"," ")}</h3>
         
      <br><br>
-
+</div>
         <div id="imagetitle" class="text-center">
         </div>
         <div class="containercontent"> <p class="text-center">
@@ -227,6 +236,7 @@ include '../Database/connect.php';
           <h6 class="display-6 text-center" >{date}</h6>
         </section>
           <br>
+        </div>
         </div>
         </div>
   <br><br>
