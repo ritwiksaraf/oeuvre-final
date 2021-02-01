@@ -4,25 +4,22 @@ include '../Database/connect.php';
 session_start();
 $username = $_SESSION['user'];
 
-if(!isset($_COOKIE[$username])){
+if(!empty($_COOKIE[$username])){
     header("Location: index.php");
 }
-?>
 
-
-<?php
 //function to delete a dir with all its contents
 function delete_directory($dirname) {
     if (is_dir($dirname))
       $dir_handle = opendir($dirname);
 if (!$dir_handle)
      return false;
-while($file = readdir($dir_handle)) {
-      if ($file != "." && $file != "..") {
-           if (!is_dir($dirname."/".$file))
-                unlink($dirname."/".$file);
+while($myfile = readdir($dir_handle)) {
+      if ($myfile != "." && $myfile != "..") {
+           if (!is_dir($dirname."/".$myfile))
+                unlink($dirname."/".$myfile);
            else
-                delete_directory($dirname.'/'.$file);
+                delete_directory($dirname.'/'.$myfile);
       }
 }
 closedir($dir_handle);
@@ -31,11 +28,12 @@ return true;
 }
 
 //get the file location
-$file = $_GET['file'];
+$myfile = $_GET['file'];
 $decision = $_POST['decision'];
 
+
 //extract file title
-$explode1 = explode('/', $file);
+$explode1 = explode('/', $myfile);
 $explode2 = explode(".", $explode1[1]);
 $title = $explode2[0];
 
@@ -44,8 +42,9 @@ if($decision == 'disapprove'){
     $statement = $db->prepare("DELETE FROM postDetails WHERE Title=?;");
     $statement->bindValue(1, $title);
     $result = $statement->execute();
-    unlink($file);
-    delete_directory("../Includes/posts/images/".$title);
+    unlink($myfile);
+    unlink("/var/www/html/Includes/posts/images/".$title."image1.jpeg");
+    rmdir("/var/www/html/Includes/posts/images/".$title);
     header("Location: dashboard.php");
 }
 elseif($decision == 'approve'){

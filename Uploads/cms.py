@@ -336,7 +336,8 @@ def updatedb(whateverFile): #takes file as an argument
     cursor.execute(f"INSERT INTO postDetails(Date, Author, Title, profanity, small_content, tags) VALUES('{Date}', '{Author}', '{tags}', '{profanity}', '{small_content}', '{Title}');")
     connect.commit()
     connect.close()
-
+    os.remove(whateverFile)
+    
 #fileMove moves the files for review/approval at admin panel 
 def fileMove():
     connect = sqlite3.connect("/var/www/html/Database/Master.db")
