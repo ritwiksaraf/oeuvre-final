@@ -45,7 +45,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Includes/stylesheets/extramainpageopening.css">
-    <title>OEUVRE</title>
+    <title>Login Page | Oeuvre | FCRIT Official Blog</title>
+    <!--todo Font new for header-->
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <style>
+        .font-new {
+            font-family: "Sedgwick Ave", cursive;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,7 +79,7 @@
                 </div>
                 <div class="col-md-6">
                     <div id="boxform" class="form-group">
-                        <h1 class="text-center">Login</h1>
+                        <h1 class="text-center font-new">Login</h1>
                         <br>
                         <form action='index.php' method="POST">
                             <input type="email" id="exampleInputEmail1" class="form-control" id="user" name="user"
@@ -293,7 +300,7 @@
 
             <!--todo steps to use start-->
             <div id="scrollforstepstouse" class="box-steps-to-use">
-                <h1 class=" text-center my-5 ">How can I upload my content? </h1>
+                <h1 class=" text-center my-5 font-new">How can I upload my content? </h1>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
@@ -340,7 +347,7 @@
             <!--todo steps to use  end-->
             <!--todo programming languages-start-->
             <div class="boxprogramming">
-                <h1 class="text-center">Languages & Frameworks</h1>
+                <h1 class="text-center font-new">Languages & Frameworks</h1>
                 <div class="container">
                     <br>
                     <div class="row text-center">
