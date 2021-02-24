@@ -293,11 +293,11 @@
 
             <!--todo steps to use start-->
             <div id="scrollforstepstouse" class="box-steps-to-use">
-                <h3 class="display-4 text-center">How to upload on OEUVRE? <i class="fa fa-search"></i></h3>
+                <h1 class=" text-center my-5 ">How can I upload my content? </h1>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="card shadow" style="height: 14rem;">
+                            <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 1</h5>
                                     <p class="card-text">Create your content which is interesting.<br> <br></p>
@@ -305,7 +305,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="card shadow" style="height: 14rem;">
+                            <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 2</h5>
                                     <p class="card-text">Login to our website and choose upload content.<br></p>
@@ -313,7 +313,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="card shadow" style="height: 14rem;">
+                            <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 3</h5>
                                     <p class="card-text">Our Moderator's team consisting of college faculties and
@@ -323,7 +323,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="card shadow" style="height: 14rem;">
+                            <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 4</h5>
                                     <p class="card-text">If your article meets our standard, we will upload the content
@@ -340,7 +340,7 @@
             <!--todo steps to use  end-->
             <!--todo programming languages-start-->
             <div class="boxprogramming">
-                <h5 class="display-4 text-center">Languages & Frameworks</h5>
+                <h1 class="text-center">Languages & Frameworks</h1>
                 <div class="container">
                     <br>
                     <div class="row text-center">
@@ -414,14 +414,14 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="Includes/scripts/script.js"></script>
 </body>
 
