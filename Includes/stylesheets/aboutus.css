@@ -42,3 +42,13 @@
   box-shadow: 0 0px 20px 0 rgba(100, 100, 100, 0.26);
 }
 /**todo hover property Ends here*/
+
+/*teacher box starts here**/
+.inside-box-teacher {
+  background-image: url("/Includes/svg/main-logo-teacher.svg");
+}
+/* .border-outside {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2%;
+} */
