@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="Includes/stylesheets/style.css">
     <link rel="stylesheet" href="Includes/stylesheets/hdft.css">
     <link rel="stylesheet" href="Includes/stylesheets/buttons.css">
+    <link rel="stylesheet" href="Includes/stylesheets/forms.css">
+
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
