@@ -28,3 +28,17 @@
   overflow: hidden;
 }
 /*? todo footer waves ends here*/
+
+/**todo hover property starts here*/
+.team-item {
+  transition: all 0.1s ease-out;
+  box-shadow: 0 0px 2px 0 rgba(100, 100, 100, 0.26);
+
+  height: 20rem;
+}
+
+.team-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0px 20px 0 rgba(100, 100, 100, 0.26);
+}
+/**todo hover property Ends here*/
