@@ -37,6 +37,8 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="Includes/stylesheets/style.css">
     <link rel="stylesheet" href="Includes/stylesheets/hdft.css">
+    <link rel="stylesheet" href="Includes/stylesheets/buttons.css">
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,10 +56,7 @@
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand logold" href="Blog/home.php"><img src="../Includes/img/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
 
         </nav>
     </section>
@@ -83,7 +82,8 @@
                             <label for="privacypolicycheckbox">I have read and agreed to the <a style="color:blue; "
                                     onclick="myFunction()">policy
                                     documents</a></label><br>
-                                    <input type="submit" class="btn btn-danger" value="Log In" name="sumbit-btn">
+                            <input type="submit" class="btn btn-block py-3 button-login" value="LOGIN"
+                                name="sumbit-btn">
                         </form><br>
                         <p>Are you an admin?Click <a href="Admin/">here </a>to login</p>
                     </div>
@@ -143,10 +143,15 @@
                 <div class="container">
                     <br>
                     <div class="row text-center">
-                        <div class="col-sm-2"><i style="color:darkorange" class="fa fa-5x fa-html5"></i></div><br>
-                        <div class="col-sm-2"><i style="color:rgb(41, 125, 194)" class="fa fa-5x fa-css3"></i></div><br>
-                        <div class="col-sm-2"><i style="color:#ffdd01;" class="fab fa-5x fa-js"></i></div><br>
-                        <div class="col-sm-2 text-center">
+                        <div class="col-xl-2 col-sm-6 p-5"><i style="color:darkorange" class="fa fa-5x fa-html5"></i>
+                        </div>
+                        <br>
+                        <div class="col-xl-2 col-sm-6  p-5"><i style="color:rgb(41, 125, 194)"
+                                class="fa fa-5x fa-css3"></i>
+                        </div><br>
+                        <div class="col-xl-2 col-sm-6 p-5"><i style="color:#ffdd01;" class="fab fa-5x fa-js"></i></div>
+                        <br>
+                        <div class="col-xl-2 col-sm-6 p-5 text-center">
                             <svg style="color:rgb(153, 0, 255)" xmlns="http://www.w3.org/2000/svg" height="70"
                                 class="d-block" viewBox="0 0 118 94" role="img">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -156,8 +161,11 @@
                             </svg>
                         </div>
                         <br>
-                        <div class="col-sm-2"><i style="color:#8892BF;" class='fab fa-5x fa-php'></i></div><br>
-                        <div class="col-sm-2"><i style="color:rgb(0, 0, 0)" class="fab fa-5x fa-python"></i></div><br>
+                        <div class="col-xl-2 col-sm-6  p-5"><i style="color:#8892BF;" class='fab fa-5x fa-php'></i>
+                        </div><br>
+                        <div class="col-xl-2 col-sm-6  p-5"><i style="color:rgb(0, 0, 0)"
+                                class="fab fa-5x fa-python"></i>
+                        </div><br>
                     </div>
                     <br>
                 </div>
@@ -179,7 +187,7 @@
     <!--Checkbox script-->
 
 
-            <!-- todo: Site footer -->
+    <!-- todo: Site footer -->
     <footer class="site-footer">
         <div class="container text-center">
             <div class="row">
