@@ -23,3 +23,13 @@ input[type="password"] {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+
+input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(94, 80, 80);
+}
