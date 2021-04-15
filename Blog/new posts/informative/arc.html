@@ -1,0 +1,285 @@
+<?php
+
+include '../Database/connect.php';
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="/Includes/img/small_icon.png" rel="shortcut icon"/>
+  <!-- Bootstrap CSS -->
+  <title>
+   Blog | OEUVRE
+  </title>
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+  <link href="/Includes/stylesheets/blog.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="/Includes/stylesheets/hdft.css" rel="stylesheet"/>
+  <link href="/Includes/stylesheets/dark-mode.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!---navigation bar------------>
+  <div class="footer1 text-center">
+   <a href="https://fcrit.ac.in/" id="nameofclg" target="_blank">
+    Fr. C. Rodrigues Institute of Technology, Vashi, Navi
+      Mumbai, India
+   </a>
+  </div>
+  <section id="nav-bar">
+   <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand logold" href="/Blog/home.php">
+     <img src="/Includes/img/logo.png"/>
+    </a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-auto">
+       <div class="nav-link custom-control custom-switch">
+        <input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+        <label class="custom-control-label" for="darkSwitch">
+         <i class="fa fa-moon-o">
+         </i>
+        </label>
+       </div>
+      </li>
+      <li class="nav-item ml-auto">
+       <div class="dropdown nav-link ml-auto">
+        <button class="dropbtn" href="">
+         ARCHIVES
+        </button>
+        <div class="dropdown-content">
+         <a href="/Blog/archives-c.php">
+          Creative
+         </a>
+         <a href="/Blog/archives-i.php">
+          Informative
+         </a>
+        </div>
+       </div>
+      </li>
+      <li class="nav-item ml-auto">
+       <a class="nav-link" href="/Blog/faq.html">
+        F.A.Q.
+       </a>
+      </li>
+      <li class="nav-item ml-auto">
+       <a class="nav-link" href="/Blog/construction.html">
+        HUMANS OF AGNELS
+       </a>
+      </li>
+      <li class="nav-item ml-auto">
+       <a class="nav-link" href="/Blog/aboutus.html">
+        ABOUT US
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </section>
+  <!--navigation bar end-->
+  <br/>
+  <br/>
+  <br/>
+  <!----------left articles side-start--->
+  <?php include '/var/www/html/Blog/featuredc.php' ?>
+  <!-----------------title-->
+  <h3 class="display-3 text-center">
+   Agnels Robotics Club
+  </h3>
+  <br/>
+  <br/>
+  <div class="text-center" id="imagetitle">
+  </div>
+  <div class="containercontent">
+   <p class="text-center">
+     <br><br><br><br>
+     About ARC <br> <br><br><br>
+     Agnel robotics club was founded in 2015, with the objective of encouraging the interest of students in the field of robotics in Fr. Conceicao Rodrigues Institute of Technology. It promotes a multi-disciplinary approach to robotics by bringing students from Electronics and Telecommunication Engineering, Computer Engineering, Electrical Engineering, Mechanical Engineering and Information Technology Engineering under one roof. As of 2017 it had membership of more than 300 students . The day to day functioning of the club is managed by students who are elected annually under the guidance of the Principal. The club provides tools, software and related facilities to the members. It also has a full fledged Research and Development department to develop new solutions, project and explore ideas in the field of Robotics. The members of the club participate in various Robotics competitions like ABU ROBOCON, IITB Techfest, BAJA, etc.
+     
+     <br><br><br>
+     Arduino Workshop <br><br>
+<br><br><br>
+     
+     “WE are fascinated by robots because they are machines that can mimic us”
+     <br>
+     The world turns to microprocessors, micro-computers and microcontrollers like Arduino and Raspberry pi when it comes to modern on the go technology. An introduction to one such device which has proven to be a fundamental in educational use of microprocessors for many aspiring engineers was given by the ARC to students of 1st ,2nd and 3rd semesters. The Arduino UNO has the capability to control various output and input devices such as an LCD screen, motors, sensors, or even Wi-Fi capable modules like the esp8266. The ARC provided a 16×2 LCD display and a few sensors with an Arduino UNO to the participants. 
+     The HC-SR04 is an ultrasonic sensor and is used in many production devices to find length or distance.
+     The LDR is a light detecting diode that increases the resistance as sensor detects light
+     The DHT11 is the humidity and temperature sensor that can be used to receive digital input for weather conditions.
+     These basic sensors were provided to the participants as a part of the workshop. The working and use of these sensors was the most important highlight of this workshop. 
+      Device programming, Basics and fundamentals of C, the basics of programming were taught to the participants with a practical, hands on approach by the members of the ARC. The team displayed wonderful synergy as they managed the entire group of participants efficiently and also ensured that everyone learnt what they had signed up for. The workshop was a great ice breaker for the students from semester 1 to really find a place for themselves in the college.
+     <br>
+     Fusion 360 Workshop
+     <br><br><br><br>
+     “Engineering is the art of designing”
+     <br><br>
+     The art of designing requires the skill of imagining and that of bringing it down on paper. The ARC conducted a workshop to train the participants to design their product in the new ‘student friendly’ Autodesk software- Fusion 360. Some of the more highlighted features of this software as compared to the famous AutoCAD is that this software is directly 3D printing ready! This software is free for students and our college is registered with Autodesk for all the students of FCRIT to use this free of cost. The team explained the various components of designing and material processing.
+     The software includes other features such as-
+     Real time simulation
+     Fully 3D environment
+     Material processing 
+     Cloud backup for all projects
+     The participants were trained with a basic example of designing a skateboard from scratch. This workshop was a great introduction to all the aspiring product designers and design thinkers. ARC equipped the participants with one of the most important weapons in the arsenal of an Engineer- the ability to design. The club members like Varad More, Steven, Aishwarya,Ritoo and everyone from the ARC team contributed to a great extent to make this a huge success.
+     <br><br>
+     ARC CLUB MATLAB
+     <br><br><br><br>
+     We all have experienced the serendipity of relevant information arriving just when we are least expecting it.  On 17th and 18th February 2020, Agnel's Robotics Club hosted a MATLAB workshop which gave hands-on experience to students on image processing and MATLAB toolboxes. Preparations were made in earnest for the event. MATLAB is in demand and has become the cynosure of the industry. MATLAB becomes significant as it allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces. Students were taught Mathematical operations using MATLAB, Visualization of data & Introduction to Image Processing and its functions. The workshop would act as a foundation for future robotic projects. The workshop concluded by teaching students the applications of the software in real life.
+     BY: AAKASH YADAV, COMPUTER  SEMESTER 2.
+     <br><br>
+     GIT SEMINAR
+     <br><br><br><br>
+     
+     Suppose you are working on an important code file. The file is lengthy, and you have modified several parts of it at once, and you try to run it. But you get an unexpected result, which leaves you stuck on a point where you are unable to figure out changing which part of the code caused it, and you want to go back to the initial state. But how do we recover any previous versions of the file now? The concept of version control solves it and is the need of the hour. 
+     The Agnel Robotics Club organized a seminar on GIT on 9th March, 2020, where basic concepts of Version control and its applications were discussed. There are several version control systems available in the market like git, visual studio, mercurial and CVS, and they provide us with features which aid us in:
+     ->Backing and restoring
+     ->Synchronized working
+     ->Working in a team
+     ->Safely create and test new features
+      <br><br>
+     The world’s leading software development platform, GitHub, uses git for version control, and the students were introduced to this and another platform called BitBucket, which is also like GitHub. The students were taught to use the utility git bash to interface GitHub and perform commands like cloning a repository from github to one’s local machine, make changes, commit them, push them back to github for everyone else to consume.
+     A little dose of laughter always helps to lighten the atmosphere and instils interest in the topic of learning, and the ARC members, with their unique way of presenting content, made sure that the students thoroughly enjoyed the learning process.
+     <br><br>
+     IOT WORKSHOP
+     <br><br><br><br>
+     The Internet is automating everything. From preventing water wastage to lighting streets, innovation in home appliances like the thermostat and making machines work remotely. With the environment around us slowly morphing into a connected network of devices, the next wave of automation is here, coined as the “Internet of Things”. Giving a head start to the students interested in learning this trending technology, the ARC conducted a three-day entry level workshop on IOT, from 11th March to 13th March, 2020. 
+     Students were introduced to the working principle, working and interfacing of Esp8266-NodeMCU with different components and applications by the ARC members. A takeaway kit was also provided at a fraction of the cost. 
+     The following were the activities conducted during the course of the workshop
+     Day 1: Initial setup, basic interface of hardware and software, use of IOT using Blynk, BMP280 sensor 
+     Day 2: implementation of IOT using Google assistant (Home automation)
+     Day 3: implementation of IOT using Thingspeak (MPU6050) & OLED interface
+     This workshop was aimed to serve as a prerequisite to the students, who want to participate in intercollegiate Robotics and IOT Project competitions, and managed to hit just the right chord with the attendees.
+     
+    <br><br><br><br>
+   </p>
+  </div>
+  <div class="container-fluid1">
+   <br/>
+   <section id="authorkanam">
+    <h4 class="display-4 text-center">
+        
+    </h4>
+    <h6 class="display-6 text-center">
+     31-1-2021
+    </h6>
+   </section>
+   <br/>
+  </div>
+  <br/>
+  <br/>
+  <!-- todo Site footer -->
+  <footer class="site-footer">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm-1 col-md-3 col-xl-3">
+      <a href="#">
+       <img class="mx-auto d-block" height="250px" src="../../Includes/img/mr carter.png" width="250"/>
+      </a>
+     </div>
+     <div class="col-sm-12 col-md-6">
+      <h6 class="text-center">
+       <b>
+        About
+       </b>
+      </h6>
+      <p class="text-center">
+       The official blog of Fr. C. Rodrigues Institute of Technology showcasing the up and
+            coming creative talent in the institution. The Website is a showcase to the immense potential of
+            engineering students around the world.
+      </p>
+     </div>
+     <div class="col-xs-6 col-md-3">
+      <h6 class="text-center">
+       Sections
+      </h6>
+      <ul class="footer-links" style="text-align:center;">
+       <li>
+        <a href="/Blog/archives-c.php#articlescroll">
+         Articles
+        </a>
+       </li>
+       <li>
+        <a href="/Blog/archives-c.php#poemscroll">
+         Poems
+        </a>
+       </li>
+       <li>
+        <a href="/Blog/archives-c.php#graphicscroll">
+         Graphic Arts
+        </a>
+       </li>
+       <br/>
+       <li>
+        <a href="/Blog/faq.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="/Blog/archives-i.php#guidancescroll">
+         Senior Guidance
+        </a>
+       </li>
+       <li>
+        <a href="/Blog/archives-i.php#tutorialscroll">
+         Tutorials
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <hr/>
+   </div>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-8 col-sm-6 col-xs-12">
+      <p class="copyright-text">
+       Copyright © 2020 All Rights Reserved by
+       <a href="https://www.fcrit.ac.in/">
+        FCRIT-Vashi
+       </a>
+       .
+      </p>
+     </div>
+     <div class="col-md-4 col-sm-6 col-xs-12">
+      <ul class="social-icons">
+       <li>
+        <a class="instagram" href="https://www.instagram.com/oeuvre.fcrit/" target="_blank">
+         <i class="fa fa-instagram">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="facebook" href="https://www.facebook.com/Oeuvre-114987203566335/" target="_blank">
+         <i class="fa fa-facebook">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="twitter" href="https://twitter.com/oeuvrefcrit" target="_blank">
+         <i class="fa fa-twitter">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!--footer end-->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+  </script>
+  <script src="../../Includes/scripts/dark-mode-switch.min.js">
+  </script>
+ </body>
+</html>
