@@ -127,14 +127,14 @@ if (empty($username)){
             <div class="row text-center">
                 <!------->
                 <div class="col-md-6 pb-1 pb-md-0">
-                    <div class="card shadow bg-primary">
-                        <a href="archives-c.php"><img class="card-img-top" src="../Includes/img/creative.png"
+                    <div class="card-spl shadow bg-primary">
+                        <a href="archives-c.php"><img class="card-img-top-spl" src="../Includes/img/creative.png"
                                 alt="Card image cap"></a>
                     </div>
                 </div>
                 <div class="col-md-6 pb-1 pb-md-0">
-                    <div class="card shadow bg-primary">
-                        <a href="archives-i.php"><img class="card-img-top" src="../Includes/img/informative.png"
+                    <div class="card-spl shadow bg-primary">
+                        <a href="archives-i.php"><img class="card-img-top-spl" src="../Includes/img/informative.png"
                                 alt="Card image cap"></a>
                     </div>
                 </div>
