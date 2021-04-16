@@ -73,7 +73,7 @@ include '../Database/connect.php';
               <div class="col-md-4 pb-1 pb-md-0">
                   <div class="card shadow bg-light">
                       <a href="posts/<?php echo $row['Title']; ?>.html"><img class="card-img-top"
-                              src="../Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"
+                              src="../Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpg"
                               alt="Card image cap"></a>
                       <div class="card-body">
                           <h5 class="card-title"><?php echo str_replace("_"," ", $row['Title']); ?></h5>
