@@ -315,7 +315,7 @@
                             <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 2</h5>
-                                    <p class="card-text">Login to our website and choose upload content.<br></p>
+                                    <p class="card-text">Email your content to us at  oeuvrefcrit@gmail.com<br></p>
                                 </div>
                             </div>
                         </div>
@@ -333,9 +333,7 @@
                             <div class="card team-item" style="height: 14rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">Step 4</h5>
-                                    <p class="card-text">If your article meets our standard, we will upload the content
-                                        to
-                                        OEUVRE.</p>
+                                    <p class="card-text">After moderation and approval your article will be displayed on the blog with your Name!.</p>
                                 </div>
                             </div>
                         </div>
