@@ -19,6 +19,8 @@
 }
 .card-img-top-spl{
   transition: all 0.3s ease-in;
+  height: 100%;
+  width: 100%;
 }
 .card-img-top:hover{
   transform: scale(1.1);
@@ -38,7 +40,6 @@
   margin:2% 0% 2% 0%;
   color: black;
   height: 30vh;
-  height: 100%;
   overflow:hidden;
 }
 .bg-primary {
