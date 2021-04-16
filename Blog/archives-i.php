@@ -53,12 +53,6 @@ include '../Database/connect.php';
             </div>
           </li>
           <li class="nav-item ml-auto">
-            <a class="nav-link" href="faq.html">F.A.Q.</a>
-          </li>
-          <li class="nav-item ml-auto">
-            <a class="nav-link" href="construction.html">HUMANS OF AGNELS</a>
-          </li>
-          <li class="nav-item ml-auto">
             <a class="nav-link" href="aboutus.html">ABOUT US</a>
           </li>
         </ul>

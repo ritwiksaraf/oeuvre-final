@@ -62,12 +62,7 @@ if (empty($username)){
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="faq.html">F.A.Q.</a>
-                    </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" href="construction.html">HUMANS OF AGNELS</a>
-                    </li>
+                            <!--Insert here-->
                     <li class="nav-item ml-auto">
                         <a class="nav-link" href="aboutus.html">ABOUT US</a>
                     </li>
@@ -112,7 +107,7 @@ if (empty($username)){
             <div class="col-md-4 pb-1 pb-md-0">
                 <div class="card shadow bg-primary">
                     <a href="posts/<?php echo $row['Title']; ?>.html"><img class="card-img-top"
-                            src="/Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpeg"
+                            src="/Includes/posts/images/<?php echo $row['Title']; ?>/image1.jpg"
                             alt="Card image cap"></a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo str_replace("_"," ", $row['Title']); ?></h5>

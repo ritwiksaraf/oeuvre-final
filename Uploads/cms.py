@@ -190,12 +190,7 @@ include '../Database/connect.php';
               </div>
             </div>
           </li>
-          <li class="nav-item ml-auto">
-            <a class="nav-link" href="/Blog/faq.html">F.A.Q.</a>
-          </li>
-          <li class="nav-item ml-auto">
-            <a class="nav-link" href="/Blog/construction.html">HUMANS OF AGNELS</a>
-          </li>
+         <!--Insert here-->
           <li class="nav-item ml-auto">
             <a class="nav-link" href="/Blog/aboutus.html">ABOUT US</a>
           </li>
@@ -223,13 +218,12 @@ include '../Database/connect.php';
         <div class="container-fluid1 ">
         <br>
         <section id="authorkanam">
-          <h4 class="display-4 text-center" >{author}</h4>
+          <h4 class="display-4 text-center" >{author.replace("_"," ")}</h4>
           <h6 class="display-6 text-center" >{date}</h6>
         </section>
           <br>
         </div>
         </div>
-  <br><br>
   <!-- todo Site footer -->
   <footer class="site-footer">
     <div class="container">
