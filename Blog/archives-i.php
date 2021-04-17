@@ -19,6 +19,8 @@ include '../Database/connect.php';
   <link rel="stylesheet" href="/Includes/stylesheets/hdft.css">
   <link rel="stylesheet" href="/Includes/stylesheets/archives-c.css">
   <link rel="stylesheet" href="/Includes/stylesheets/dark-mode.css">
+  <link rel="stylesheet" href="/Includes/stylesheets/index.css">
+  <link rel="stylesheet" href="/Includes/stylesheets/blog.css">
 
 </head>
 
