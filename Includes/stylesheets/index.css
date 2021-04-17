@@ -15,7 +15,6 @@
 .card-img-top{
   transition: all 0.3s ease-in;
   height:20vh;
-  height: 100%;
 }
 .card-img-top-spl{
   transition: all 0.3s ease-in;
