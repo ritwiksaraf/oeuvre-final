@@ -63,6 +63,8 @@ include '../Database/connect.php';
   <!--!navigation bar end-->
   <br><br>  
   <h4 class="display-4 text-center">Creative Posts</h4>
+  <div class="container">
+        <div class="row text-center">
   <?php
                         session_start();
             $statement = $db->prepare("select * From approvedPosts where tags='creative';");
@@ -81,6 +83,8 @@ include '../Database/connect.php';
                   </div>
               </div>
               <?php } ?>
+            </div>
+            </div>
         <!--!Graphics start-->
         <h4 class="display-4 text-center">Graphics</h4>
         <div class="container">

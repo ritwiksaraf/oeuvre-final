@@ -65,6 +65,8 @@ include '../Database/connect.php';
       <div class="col-lg-9 bg-light">
         <!--!informative start-->
         <h4 class="display-4 text-center">Informative posts</h4>
+        <div class="container">
+        <div class="row text-center">
         <?php
                         session_start();
             $statement = $db->prepare("select * From approvedPosts where tags='informative';");
@@ -84,6 +86,8 @@ include '../Database/connect.php';
               </div>
               <?php } ?>
         <!--!informative end--->
+            </div>
+            </div>
       </div>
       <!--!----------end of div of col-9-right side column----->
     </div>
